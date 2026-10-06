@@ -1,0 +1,74 @@
+/* ClearMind — Onboarding animations */
+
+@keyframes cm-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cm-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cm-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cm-stagger-1 { animation: cm-fade-in 0.5s ease 0.05s both; }
+.cm-stagger-2 { animation: cm-fade-in 0.5s ease 0.1s both; }
+.cm-stagger-3 { animation: cm-fade-in 0.5s ease 0.15s both; }
+.cm-stagger-4 { animation: cm-fade-in 0.5s ease 0.2s both; }
+.cm-stagger-5 { animation: cm-fade-in 0.5s ease 0.25s both; }
+.cm-stagger-6 { animation: cm-fade-in 0.5s ease 0.3s both; }
+
+/* Milestone celebration animations */
+
+@keyframes cm-confetti-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+@keyframes cm-milestone-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 115, 42, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(217, 115, 42, 0);
+  }
+}
+
+@keyframes cm-milestone-number {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
