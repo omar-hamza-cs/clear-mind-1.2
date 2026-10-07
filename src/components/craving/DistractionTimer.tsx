@@ -5,7 +5,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import { DISTRACTION_ACTIVITIES, DISTRACTION_TOTAL_SECONDS } from '@/constants/craving';
 import { triggerHaptic } from '@/lib/haptics';
 
@@ -154,7 +154,7 @@ export function DistractionTimer({ onComplete, onExit }: DistractionTimerProps) 
           borderRadius: radii.xl,
           padding: spacing.xxl,
           border: `1px solid ${colors.border}`,
-          boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+          boxShadow: shadows.md,
           textAlign: 'center',
           animation: 'cm-fade-in 0.5s ease both',
         }}

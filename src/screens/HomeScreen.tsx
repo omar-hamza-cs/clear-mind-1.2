@@ -4,24 +4,11 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useEffect, useState } from 'react';
-import {
-  Wallet,
-  Flame,
-  Shield,
-  Trophy,
-  Zap,
-  BookOpen,
-  CheckSquare,
-  Sparkles,
-  CheckCircle2,
-  AlertCircle,
-  ArrowRight,
-  Wind,
-} from 'lucide-react';
+import { Wallet, Flame, Shield, Trophy, Zap, BookOpen, SquareCheck as CheckSquare, Sparkles, CircleCheck as CheckCircle2, CircleAlert as AlertCircle, ArrowRight, Wind } from 'lucide-react';
 import { useStore } from '@/store';
 import { useTheme } from '@/context/ThemeProvider';
 import { useTab } from '@/context/Navigation';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import {
   getCurrentStreakDays,
   getLongestStreak,
@@ -181,7 +168,7 @@ export function HomeScreen({ onOpenCraving, onOpenCheckIn }: { onOpenCraving: ()
             backgroundColor: colors.surface,
             borderRadius: radii.xl,
             border: `1px solid ${colors.border}`,
-            boxShadow: '0 2px 16px rgba(0,0,0,0.05)',
+            boxShadow: shadows.md,
           }}
         >
           <ProgressRing percent={foreverGoal ? null : goalPercent} size={240} strokeWidth={16}>
@@ -247,7 +234,7 @@ export function HomeScreen({ onOpenCraving, onOpenCheckIn }: { onOpenCraving: ()
             marginBottom: spacing.lg,
             backgroundColor: palette.primary[100],
             borderRadius: radii.lg,
-            border: '1px solid #c7dec8',
+            border: `1px solid ${palette.primary[200]}`,
           }}
         >
           <div

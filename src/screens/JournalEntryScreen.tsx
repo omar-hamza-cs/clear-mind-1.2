@@ -351,7 +351,7 @@ export function JournalEntryScreen({ entry, onClose }: JournalEntryScreenProps) 
                 height: 28,
                 appearance: 'none',
                 background: cravingLevel > 0
-                  ? `linear-gradient(to right, #e8933f 0%, #e8933f ${pct}%, ${colors.border} ${pct}%, ${colors.border} 100%)`
+                  ? `linear-gradient(to right, ${palette.accent[400]} 0%, ${palette.accent[400]} ${pct}%, ${colors.border} ${pct}%, ${colors.border} 100%)`
                   : colors.border,
                 borderRadius: radii.full,
                 cursor: 'pointer',

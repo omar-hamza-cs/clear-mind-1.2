@@ -6,7 +6,7 @@
 import { useEffect, useState } from 'react';
 import { Brain, Wind } from 'lucide-react';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii } from '@/constants/theme';
+import { typography, spacing, radii, shadows } from '@/constants/theme';
 
 export function SplashScreen() {
   const { colors } = useTheme();
@@ -42,7 +42,7 @@ export function SplashScreen() {
           justifyContent: 'center',
           transition: 'transform 2s ease-in-out',
           transform: breathe ? 'scale(1.12)' : 'scale(0.92)',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+          boxShadow: shadows.lg,
         }}
       >
         <Brain

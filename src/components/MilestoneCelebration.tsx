@@ -9,7 +9,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { Trophy, X, Sparkles } from 'lucide-react';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import { triggerHaptic } from '@/lib/haptics';
 import type { Milestone } from '@/types';
 
@@ -110,7 +110,7 @@ export function MilestoneCelebration({ milestone, onClose }: MilestoneCelebratio
           maxWidth: 400,
           width: '100%',
           textAlign: 'center',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+          boxShadow: shadows.xl,
           animation: 'cm-scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both',
           position: 'relative',
           overflow: 'hidden',

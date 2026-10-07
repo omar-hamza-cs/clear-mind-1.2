@@ -119,7 +119,7 @@ export function PrivacyScreen({ onClose }: PrivacyScreenProps) {
             borderRadius: radii.lg,
             padding: spacing.xl,
             marginBottom: spacing.xl,
-            border: '1px solid #c7dec8',
+            border: `1px solid ${palette.primary[200]}`,
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.sm }}>

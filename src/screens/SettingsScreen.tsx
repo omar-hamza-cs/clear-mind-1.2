@@ -6,34 +6,10 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useState, useEffect, useCallback } from 'react';
-import {
-  Bell,
-  BellOff,
-  Calendar,
-  Wind,
-  Trophy,
-  AlertCircle,
-  ChevronRight,
-  Trash2,
-  Settings as SettingsIcon,
-  Moon,
-  Sun,
-  Monitor,
-  Download,
-  RotateCcw,
-  Shield,
-  Info,
-  Pencil,
-  X,
-  Check,
-  Target,
-  Wallet,
-  Heart,
-  Clock,
-} from 'lucide-react';
+import { Bell, BellOff, Calendar, Wind, Trophy, CircleAlert as AlertCircle, ChevronRight, Trash2, Settings as SettingsIcon, Moon, Sun, Monitor, Download, RotateCcw, Shield, Info, Pencil, X, Check, Target, Wallet, Heart, Clock } from 'lucide-react';
 import { useStore } from '@/store';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import { QUIT_REASONS, QUIT_GOALS } from '@/constants/theme';
 import { triggerHaptic } from '@/lib/haptics';
 import {
@@ -266,7 +242,7 @@ export function SettingsScreen() {
             style={{
               display: 'flex', alignItems: 'flex-start', gap: spacing.md,
               padding: spacing.lg, marginBottom: spacing.lg,
-              backgroundColor: palette.warning[100], borderRadius: radii.lg, border: '1px solid #fde68a',
+              backgroundColor: palette.warning[100], borderRadius: radii.lg, border: `1px solid ${palette.warning[200]}`,
             }}
           >
             <AlertCircle size={20} color={palette.warning[600]} style={{ flexShrink: 0, marginTop: 2 }} />
@@ -593,7 +569,7 @@ function ToggleRow({ icon, label, description, value, onToggle, disabled }: { ic
           transition: 'background-color 0.2s ease', flexShrink: 0,
         }}
       >
-        <div style={{ position: 'absolute', top: 3, left: value ? 25 : 3, width: 22, height: 22, borderRadius: '50%', backgroundColor: palette.neutral[50], transition: 'left 0.2s ease', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }} />
+        <div style={{ position: 'absolute', top: 3, left: value ? 25 : 3, width: 22, height: 22, borderRadius: '50%', backgroundColor: palette.neutral[50], transition: 'left 0.2s ease', boxShadow: shadows.lg }} />
       </button>
     </div>
   );
@@ -612,7 +588,7 @@ function ConfirmModal({ action, onConfirm, onCancel }: { action: ConfirmAction; 
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        style={{ backgroundColor: colors.surface, borderRadius: radii.xl, maxWidth: 400, width: '100%', boxShadow: '0 20px 60px rgba(0,0,0,0.3)', animation: 'cm-scale-in 0.25s ease both' }}
+        style={{ backgroundColor: colors.surface, borderRadius: radii.xl, maxWidth: 400, width: '100%', boxShadow: shadows.xl, animation: 'cm-scale-in 0.25s ease both' }}
       >
         <div style={{ padding: spacing.xl, textAlign: 'center' }}>
           <div

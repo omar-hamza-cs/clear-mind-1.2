@@ -4,21 +4,10 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useMemo } from 'react';
-import {
-  X,
-  Smile,
-  Wind,
-  Moon,
-  Zap,
-  CheckCircle2,
-  CloudRain,
-  BookOpen,
-  Shield,
-  FileText,
-} from 'lucide-react';
+import { X, Smile, Wind, Moon, Zap, CircleCheck as CheckCircle2, CloudRain, BookOpen, Shield, FileText } from 'lucide-react';
 import { useStore } from '@/store';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import type { MoodLevel } from '@/types';
 
 interface DayDetailModalProps {
@@ -102,7 +91,7 @@ export function DayDetailModal({ dateKey, onClose }: DayDetailModalProps) {
           width: '100%',
           maxHeight: '85vh',
           overflowY: 'auto',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+          boxShadow: shadows.xl,
           animation: 'cm-scale-in 0.3s ease both',
         }}
       >

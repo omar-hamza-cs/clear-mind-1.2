@@ -6,7 +6,7 @@
 import { type ReactNode } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 
 // ─── Progress Bar ────────────────────────────────────────────
 
@@ -302,7 +302,7 @@ export function OnboardingCard({
         textAlign: 'left',
         width: '100%',
         transition: 'border-color 0.2s ease, transform 0.1s ease',
-        boxShadow: '0 1px 6px rgba(0,0,0,0.04)',
+        boxShadow: shadows.sm,
       }}
     >
       {children}
@@ -406,7 +406,7 @@ export function ToggleSwitch({
           borderRadius: '50%',
           backgroundColor: palette.neutral[50],
           transition: 'left 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
-          boxShadow: '0 1px 4px rgba(0,0,0,0.15)',
+          boxShadow: shadows.lg,
         }}
       />
     </button>

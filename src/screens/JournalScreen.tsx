@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '@/store';
 import { useTheme } from '@/context/ThemeProvider';
-import { typography, spacing, radii, palette } from '@/constants/theme';
+import { typography, spacing, radii, palette, shadows } from '@/constants/theme';
 import { JournalEntryScreen } from '@/screens/JournalEntryScreen';
 import type { JournalEntry, MoodLevel } from '@/types';
 
@@ -552,7 +552,7 @@ function DeleteConfirmModal({
           borderRadius: radii.xl,
           maxWidth: 400,
           width: '100%',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+          boxShadow: shadows.xl,
           animation: 'cm-scale-in 0.25s ease both',
         }}
       >
